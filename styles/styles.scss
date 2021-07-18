@@ -72,7 +72,6 @@ header{
 .cta{
     border: 2px solid $yellowColor;
     padding: 5px 20px 5px 20px;
-    // border-radius: 20px;
     transition: background-color 1s ease;
 }
 
@@ -119,6 +118,11 @@ header{
     }
 }
 
+@media (max-width: 1000px) {
+    .projects{
+        margin: 50px auto !important;
+    }
+}
 
 
 .banner > img{
@@ -172,12 +176,11 @@ header{
 
 @media (max-width: 800px) {
     .project-card{
-        width: 80vw !important;
-        margin: 20px 0 !important;
+        width: 100%;
     }
 
     .contact{
-        width: 100vw !important;
+        width: 100vw;
     }
 }
 
@@ -185,6 +188,7 @@ header{
     .project-card{
         flex-direction: column;
     }
+
     .project-name{
         width: 100% !important;
     }
@@ -324,18 +328,28 @@ hr{
 
     .projects{
         width: 100%;
-        padding: 50px;
+        margin: 50px 0px;
+        // padding: 50px;
 
         .project-card{
-            width: 70%;
+            max-width: 75%;
             margin: -20px auto 0px;
             border: 10px solid $brownColor;
             display: flex;
             justify-content: space-around;
             padding: 20px;
 
+            @media (max-width: 380px) {
+                max-width: 70%;
+            }
+
             h2{
                 font-size: 1.8rem;
+
+                @media (max-width: 380px) {
+                    // width: 100px;
+                    font-size: 1.4rem;
+                }
             }
 
             .project-name{
